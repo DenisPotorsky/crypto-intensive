@@ -1,16 +1,9 @@
-from django.forms import ModelForm
-from django.forms import Textarea
-from .models import Contact
+from django import forms
 
 
-class ContactForm(ModelForm):
-    class Meta:
-        model = Contact
-        fields = ['first_name', 'last_name', 'phone_number', 'email', 'message']
-        widgets = {
-            'message': Textarea(
-                attrs={
-                    'placeholder': 'Напишите тут Ваше сообщение'
-                }
-            )
-        }
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=200)
+    last_name = forms.CharField(max_length=200)
+    phone_number = forms.IntegerField()
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control'}))
