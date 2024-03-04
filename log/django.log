@@ -346,3 +346,983 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: crypto/add_contact.html
 ERROR 2024-03-03 10:51:47,378 basehttp 18335 6161100800 "GET /add_contact/ HTTP/1.1" 500 76047
+INFO 2024-03-03 11:12:47,166 autoreload 18563 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 11:12:49,181 basehttp 18563 6122745856 "GET / HTTP/1.1" 200 342
+WARNING 2024-03-03 11:12:49,325 log 18563 6139572224 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2024-03-03 11:12:49,325 basehttp 18563 6139572224 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2513
+WARNING 2024-03-03 11:12:49,337 log 18563 6139572224 Not Found: /apple-touch-icon.png
+WARNING 2024-03-03 11:12:49,338 basehttp 18563 6139572224 "GET /apple-touch-icon.png HTTP/1.1" 404 2477
+ERROR 2024-03-03 11:13:00,939 log 18563 6122745856 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'crypto/add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crypto/add_contact.html
+ERROR 2024-03-03 11:13:00,940 basehttp 18563 6122745856 "GET /add_contact/ HTTP/1.1" 500 76029
+INFO 2024-03-03 11:13:23,183 autoreload 18563 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-03 11:13:23,514 autoreload 18595 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 11:13:25,077 basehttp 18595 6131888128 "GET / HTTP/1.1" 200 342
+ERROR 2024-03-03 11:13:28,201 log 18595 6131888128 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: crypto/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: crypto/base.html
+ERROR 2024-03-03 11:13:28,204 basehttp 18595 6131888128 "GET /add_contact/ HTTP/1.1" 500 126296
+INFO 2024-03-03 11:13:42,077 autoreload 18595 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-03 11:13:42,467 autoreload 18605 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 11:17:23,965 autoreload 18637 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 11:17:25,328 basehttp 18637 6125039616 "GET / HTTP/1.1" 200 342
+WARNING 2024-03-03 11:17:32,259 log 18637 6125039616 Not Found: /index/
+WARNING 2024-03-03 11:17:32,259 basehttp 18637 6125039616 "GET /index/ HTTP/1.1" 404 2435
+INFO 2024-03-03 11:32:36,330 basehttp 18637 6125039616 "GET / HTTP/1.1" 200 342
+ERROR 2024-03-03 11:32:54,429 log 18637 6125039616 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'crypto/add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: crypto/add_contact.html
+ERROR 2024-03-03 11:32:54,430 basehttp 18637 6125039616 "GET /add_contact/ HTTP/1.1" 500 76029
+INFO 2024-03-03 11:47:29,538 basehttp 18637 6125039616 "GET / HTTP/1.1" 200 342
+INFO 2024-03-03 11:49:59,186 autoreload 18637 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-03 11:49:59,564 autoreload 18945 8105104128 Watching for file changes with StatReloader
+ERROR 2024-03-03 11:50:12,573 log 18945 6201126912 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: crypto/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: crypto/base.html
+ERROR 2024-03-03 11:50:12,575 basehttp 18945 6201126912 "GET /add_contact/ HTTP/1.1" 500 126296
+ERROR 2024-03-03 11:50:43,099 log 18945 6201126912 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-03-03 11:50:43,100 basehttp 18945 6201126912 "GET /add_contact/ HTTP/1.1" 500 126086
+ERROR 2024-03-03 11:51:49,708 log 18945 6201126912 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-03-03 11:51:49,710 basehttp 18945 6201126912 "GET /add_contact/ HTTP/1.1" 500 126086
+ERROR 2024-03-03 11:53:16,490 log 18945 6201126912 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: add_contact.html
+ERROR 2024-03-03 11:53:16,493 basehttp 18945 6201126912 "GET /add_contact/ HTTP/1.1" 500 75903
+INFO 2024-03-03 11:54:41,954 autoreload 18945 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-03 11:54:42,347 autoreload 19013 8105104128 Watching for file changes with StatReloader
+ERROR 2024-03-03 11:54:42,518 log 19013 6122696704 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'contact_form/add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-03-03 11:54:42,520 basehttp 19013 6122696704 "GET /add_contact/ HTTP/1.1" 500 126216
+ERROR 2024-03-03 11:56:05,581 log 19013 6122696704 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: crypto/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'contact_form/add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: crypto/base.html
+ERROR 2024-03-03 11:56:05,584 basehttp 19013 6122696704 "GET /add_contact/ HTTP/1.1" 500 126426
+ERROR 2024-03-03 11:59:12,653 log 19013 6122696704 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 33, in add_contact
+    return render(request, 'contact_form/add_contact.html', {'form': form, 'message': message})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-03-03 11:59:12,655 basehttp 19013 6122696704 "GET /add_contact/ HTTP/1.1" 500 126216
+INFO 2024-03-03 12:02:22,359 autoreload 19013 8105104128 /Users/den/Desktop/crypto_intensive/crypto/crypto/settings.py changed, reloading.
+INFO 2024-03-03 12:02:22,872 autoreload 19064 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 12:02:23,774 basehttp 19064 6124498944 "GET /add_contact/ HTTP/1.1" 200 1481
+INFO 2024-03-03 12:05:15,390 autoreload 19064 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/forms.py changed, reloading.
+INFO 2024-03-03 12:05:15,748 autoreload 19089 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 12:06:31,678 autoreload 19101 8105104128 Watching for file changes with StatReloader
+ERROR 2024-03-03 12:06:33,137 log 19101 6122680320 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 8, in index
+    return render(request, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2024-03-03 12:06:33,139 basehttp 19101 6122680320 "GET / HTTP/1.1" 500 74867
+INFO 2024-03-03 12:07:53,315 autoreload 19101 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-03 12:07:53,700 autoreload 19121 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 12:07:53,922 basehttp 19121 6127890432 "GET / HTTP/1.1" 200 342
+INFO 2024-03-03 12:08:23,657 basehttp 19121 6127890432 "GET /add_contact/ HTTP/1.1" 200 1472
+ERROR 2024-03-03 12:08:58,618 log 19121 6127890432 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 20, in add_contact
+    contact = Contact(name=name,
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Contact() got unexpected keyword arguments: 'name'
+ERROR 2024-03-03 12:08:58,620 basehttp 19121 6127890432 "POST /add_contact/ HTTP/1.1" 500 69392
+INFO 2024-03-03 12:09:43,926 autoreload 19121 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-03 12:09:44,297 autoreload 19136 8105104128 Watching for file changes with StatReloader
+ERROR 2024-03-03 12:09:46,477 log 19136 6136688640 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 15, in add_contact
+    name = request.POST['first_name']
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'first_name'
+ERROR 2024-03-03 12:09:46,479 basehttp 19136 6136688640 "POST /add_contact/ HTTP/1.1" 500 70653
+ERROR 2024-03-03 15:52:02,473 log 19136 6136688640 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 15, in add_contact
+    name = request.POST['first_name']
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'first_name'
+ERROR 2024-03-03 15:52:02,477 basehttp 19136 6136688640 "POST /add_contact/ HTTP/1.1" 500 70653
+INFO 2024-03-03 15:55:19,219 autoreload 19136 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/forms.py changed, reloading.
+INFO 2024-03-03 15:55:19,604 autoreload 19249 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 15:55:56,033 autoreload 19271 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 15:55:58,921 basehttp 19271 6165016576 "GET / HTTP/1.1" 200 342
+INFO 2024-03-03 15:56:10,836 basehttp 19271 6165016576 "GET /add_contact/ HTTP/1.1" 200 1481
+INFO 2024-03-03 15:57:41,220 autoreload 19271 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/forms.py changed, reloading.
+INFO 2024-03-03 15:57:41,597 autoreload 19294 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 15:58:27,409 autoreload 19314 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 15:58:28,769 basehttp 19314 6129577984 "GET / HTTP/1.1" 200 342
+WARNING 2024-03-03 15:58:41,226 log 19314 6129577984 Not Found: /add_client
+WARNING 2024-03-03 15:58:41,227 basehttp 19314 6129577984 "GET /add_client HTTP/1.1" 404 2447
+INFO 2024-03-03 15:59:20,500 autoreload 19314 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/forms.py changed, reloading.
+INFO 2024-03-03 15:59:20,756 autoreload 19343 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 15:59:22,333 basehttp 19343 6203207680 "GET / HTTP/1.1" 200 342
+INFO 2024-03-03 15:59:30,781 basehttp 19343 6203207680 "GET /add_contact/ HTTP/1.1" 200 1494
+ERROR 2024-03-03 16:00:29,570 log 19343 6203207680 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 15, in add_contact
+    name = request.POST['first_name']
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'first_name'
+ERROR 2024-03-03 16:00:29,571 basehttp 19343 6203207680 "POST /add_contact/ HTTP/1.1" 500 70677
+INFO 2024-03-03 16:01:12,147 autoreload 19343 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/models.py changed, reloading.
+INFO 2024-03-03 16:01:12,468 autoreload 19360 8105104128 Watching for file changes with StatReloader
+ERROR 2024-03-03 16:01:16,567 log 19360 6158839808 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 15, in add_contact
+    name = request.POST['first_name']
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'first_name'
+ERROR 2024-03-03 16:01:16,568 basehttp 19360 6158839808 "POST /add_contact/ HTTP/1.1" 500 70677
+INFO 2024-03-03 16:01:56,496 autoreload 19360 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-03 16:01:56,756 autoreload 19370 8105104128 Watching for file changes with StatReloader
+ERROR 2024-03-03 16:02:00,973 log 19370 6135197696 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 20, in add_contact
+    contact = Contact(first_name=name,
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Contact() got unexpected keyword arguments: 'first_name'
+ERROR 2024-03-03 16:02:00,974 basehttp 19370 6135197696 "POST /add_contact/ HTTP/1.1" 500 69470
+INFO 2024-03-03 16:02:42,916 autoreload 19370 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-03 16:02:43,252 autoreload 19384 8105104128 Watching for file changes with StatReloader
+ERROR 2024-03-03 16:02:46,528 log 19384 6166376448 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table contact_form_contact has no column named name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 26, in add_contact
+    contact.save()
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table contact_form_contact has no column named name
+ERROR 2024-03-03 16:02:46,531 basehttp 19384 6166376448 "POST /add_contact/ HTTP/1.1" 500 143220
+INFO 2024-03-03 16:04:03,306 autoreload 19408 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-03 16:04:04,671 basehttp 19408 6200209408 "GET / HTTP/1.1" 200 342
+INFO 2024-03-03 16:04:13,533 basehttp 19408 6200209408 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-03 16:04:54,522 basehttp 19408 6200209408 "POST /add_contact/ HTTP/1.1" 200 33
+INFO 2024-03-03 16:07:16,107 basehttp 19408 6200209408 "POST /add_contact/ HTTP/1.1" 200 33
+INFO 2024-03-03 16:07:22,532 basehttp 19408 6200209408 "POST /add_contact/ HTTP/1.1" 200 33
+ERROR 2024-03-03 16:08:19,879 log 19408 6200209408 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 98, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 26, in add_contact
+    contact.save()
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1833, in execute_sql
+    self.connection.ops.fetch_returned_insert_columns(
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/base/operations.py", line 213, in fetch_returned_insert_columns
+    return cursor.fetchone()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 97, in inner
+    with self:
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 98, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+ERROR 2024-03-03 16:08:19,882 basehttp 19408 6200209408 "POST /add_contact/ HTTP/1.1" 500 120669
+INFO 2024-03-03 16:08:35,000 basehttp 19408 6200209408 "POST /add_contact/ HTTP/1.1" 200 33
+INFO 2024-03-04 04:42:43,797 autoreload 20105 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 04:42:46,774 basehttp 20105 6130053120 "GET / HTTP/1.1" 200 342
+INFO 2024-03-04 04:43:01,398 basehttp 20105 6130053120 "GET /add_contact/ HTTP/1.1" 200 1494
+ERROR 2024-03-04 04:43:34,010 log 20105 6130053120 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 27, in add_contact
+    send_mail(contact, recipient_list=['denis-s2@yandex.ru'])
+TypeError: send_mail() missing 2 required positional arguments: 'message' and 'from_email'
+ERROR 2024-03-04 04:43:34,011 basehttp 20105 6130053120 "POST /add_contact/ HTTP/1.1" 500 63288
+INFO 2024-03-04 04:44:46,310 autoreload 20105 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 04:44:46,681 autoreload 20126 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 04:46:11,301 basehttp 20126 6162460672 "GET / HTTP/1.1" 200 342
+INFO 2024-03-04 04:46:18,254 basehttp 20126 6162460672 "GET /add_contact/ HTTP/1.1" 200 1494
+ERROR 2024-03-04 04:47:49,374 log 20126 6162460672 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 98, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 26, in add_contact
+    contact.save()
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1833, in execute_sql
+    self.connection.ops.fetch_returned_insert_columns(
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/backends/base/operations.py", line 213, in fetch_returned_insert_columns
+    return cursor.fetchone()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 97, in inner
+    with self:
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/db/utils.py", line 98, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+ERROR 2024-03-04 04:47:49,377 basehttp 20126 6162460672 "POST /add_contact/ HTTP/1.1" 500 120903
+INFO 2024-03-04 04:50:37,235 autoreload 20126 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 04:50:37,611 autoreload 20159 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 04:50:38,787 basehttp 20159 6190657536 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 04:53:15,881 autoreload 20159 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 04:53:16,280 autoreload 20181 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 04:53:49,258 basehttp 20181 6159675392 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 04:54:12,719 basehttp 20181 6159675392 "POST /add_contact/ HTTP/1.1" 200 31
+INFO 2024-03-04 04:54:25,047 basehttp 20181 6159675392 "POST /add_contact/ HTTP/1.1" 200 31
+INFO 2024-03-04 04:54:29,976 basehttp 20181 6159675392 "POST /add_contact/ HTTP/1.1" 200 31
+INFO 2024-03-04 04:54:38,504 basehttp 20181 6159675392 "POST /add_contact/ HTTP/1.1" 200 31
+INFO 2024-03-04 05:08:05,825 autoreload 20181 8105104128 /Users/den/Desktop/crypto_intensive/crypto/crypto/settings.py changed, reloading.
+INFO 2024-03-04 05:08:06,219 autoreload 20302 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:08:14,094 basehttp 20302 6165508096 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 05:08:44,174 autoreload 20302 8105104128 /Users/den/Desktop/crypto_intensive/crypto/crypto/settings.py changed, reloading.
+INFO 2024-03-04 05:08:44,511 autoreload 20322 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:09:15,201 autoreload 20322 8105104128 /Users/den/Desktop/crypto_intensive/crypto/crypto/settings.py changed, reloading.
+INFO 2024-03-04 05:09:15,537 autoreload 20333 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:10:17,462 basehttp 20333 6133723136 "GET / HTTP/1.1" 200 342
+INFO 2024-03-04 05:19:24,833 autoreload 20416 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:20:39,135 autoreload 20416 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:20:39,449 autoreload 20443 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:20:42,037 basehttp 20443 6169849856 "GET / HTTP/1.1" 200 342
+INFO 2024-03-04 05:20:56,342 basehttp 20443 6169849856 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 05:22:19,717 autoreload 20443 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:22:20,075 autoreload 20464 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:23:17,066 basehttp 20464 6192443392 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 05:28:07,135 autoreload 20464 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:28:07,455 autoreload 20495 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:28:12,508 autoreload 20501 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:28:14,875 basehttp 20501 6164131840 "GET / HTTP/1.1" 200 342
+INFO 2024-03-04 05:28:25,048 basehttp 20501 6164131840 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 05:33:13,894 autoreload 20501 8105104128 /Users/den/Desktop/crypto_intensive/crypto/crypto/settings.py changed, reloading.
+INFO 2024-03-04 05:33:14,269 autoreload 20526 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:33:21,435 basehttp 20526 6160412672 "GET /add_contact/ HTTP/1.1" 200 1494
+ERROR 2024-03-04 05:34:42,976 log 20526 6160412672 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 28, in add_contact
+    send_mail('hello',
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/mail/__init__.py", line 87, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/mail/backends/smtp.py", line 127, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/mail/backends/smtp.py", line 85, in open
+    self.connection = self.connection_class(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 836, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+ERROR 2024-03-04 05:34:42,978 basehttp 20526 6160412672 "POST /add_contact/ HTTP/1.1" 500 104842
+INFO 2024-03-04 05:35:39,554 autoreload 20526 8105104128 /Users/den/Desktop/crypto_intensive/crypto/crypto/settings.py changed, reloading.
+INFO 2024-03-04 05:35:39,903 autoreload 20549 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:35:45,117 autoreload 20549 8105104128 /Users/den/Desktop/crypto_intensive/crypto/crypto/settings.py changed, reloading.
+INFO 2024-03-04 05:35:45,381 autoreload 20557 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:35:46,340 basehttp 20557 6196670464 "GET / HTTP/1.1" 200 342
+INFO 2024-03-04 05:35:54,649 basehttp 20557 6196670464 "GET /add_contact/ HTTP/1.1" 200 1494
+ERROR 2024-03-04 05:36:26,043 log 20557 6196670464 Internal Server Error: /add_contact/
+Traceback (most recent call last):
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py", line 28, in add_contact
+    send_mail('hello',
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/mail/__init__.py", line 87, in send_mail
+    return mail.send()
+           ^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/mail/backends/smtp.py", line 127, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "/Users/den/Desktop/crypto_intensive/.venv/lib/python3.11/site-packages/django/core/mail/backends/smtp.py", line 92, in open
+    self.connection.starttls(context=self.ssl_context)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/smtplib.py", line 790, in starttls
+    self.sock = context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1075, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1346, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1002)
+ERROR 2024-03-04 05:36:26,045 basehttp 20557 6196670464 "POST /add_contact/ HTTP/1.1" 500 99697
+INFO 2024-03-04 05:42:39,145 autoreload 20679 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:42:41,258 basehttp 20679 6123679744 "GET / HTTP/1.1" 200 342
+INFO 2024-03-04 05:42:47,544 basehttp 20679 6123679744 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 05:43:09,445 basehttp 20679 6123679744 "POST /add_contact/ HTTP/1.1" 200 33
+INFO 2024-03-04 05:45:14,467 autoreload 20679 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:45:14,826 autoreload 20710 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:47:29,140 autoreload 20710 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:47:29,510 autoreload 20743 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:48:04,322 autoreload 20743 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:48:04,692 autoreload 20756 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:48:18,049 autoreload 20756 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:48:18,380 autoreload 20764 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:48:23,978 basehttp 20764 6160592896 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 05:48:50,721 basehttp 20764 6160592896 "POST /add_contact/ HTTP/1.1" 200 33
+INFO 2024-03-04 05:51:38,695 autoreload 20764 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:51:39,044 autoreload 20800 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:52:00,568 autoreload 20800 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:52:00,907 autoreload 20809 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 05:55:52,891 autoreload 20809 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 05:55:53,272 autoreload 20839 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 06:06:41,555 autoreload 20839 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 06:06:41,936 autoreload 20923 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 06:08:19,899 autoreload 20923 8105104128 /Users/den/Desktop/crypto_intensive/crypto/contact_form/views.py changed, reloading.
+INFO 2024-03-04 06:08:20,282 autoreload 20950 8105104128 Watching for file changes with StatReloader
+INFO 2024-03-04 06:08:24,596 basehttp 20950 6159462400 "GET /add_contact/ HTTP/1.1" 200 1494
+INFO 2024-03-04 06:08:46,164 basehttp 20950 6159462400 "POST /add_contact/ HTTP/1.1" 200 191

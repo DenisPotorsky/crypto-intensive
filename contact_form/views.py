@@ -2,10 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import ContactForm
 from .models import Contact
+from django.core.mail import send_mail
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'contact_form/index.html')
 
 
 def add_contact(request):
@@ -24,13 +25,23 @@ def add_contact(request):
                               message=message,
                               )
             contact.save()
+            message = (f'Сообщение из формы от {name} {last_name} \nНомер телефона: {phone_number} \nпочта: {email}'
+                       f' \n{message}')
+            email('Появился новый желающий', message)
             return HttpResponse('Контакт сохранён')
-        return HttpResponse('Ошибка валидации')
-
+        return HttpResponse(f'Ошибка валидации, {form.errors}')
     else:
         form = ContactForm()
         message = 'Заполните форму'
-        return render(request, 'crypto/add_contact.html', {'form': form, 'message': message})
+        return render(request, 'contact_form/add_contact.html', {'form': form, 'message': message})
+
+
+def email(subject, content):
+    send_mail(subject,
+              content,
+              'denis-s2@yandex.ru',
+              ['denis-s2@yandex.ru']
+              )
 
 
 def show_clients(request):

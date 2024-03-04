@@ -26,6 +26,7 @@ DEBUG = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
+
 ALLOWED_HOSTS = [
     "192.168.0.2",
     "127.0.0.1",
@@ -61,7 +62,7 @@ ROOT_URLCONF = 'crypto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -158,3 +159,15 @@ LOGGING = {
         },
     },
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'denis-s2@yandex.ru'
+EMAIL_HOST_PASSWORD = 'hlpfjlpqhuembrew'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
+EMAIL_ADMIN = EMAIL_HOST_USER
+
